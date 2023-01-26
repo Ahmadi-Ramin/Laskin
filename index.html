@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript-laskin</title>
+</head>
+
+<body>
+    <h1>Laskin</h1>
+    <form name="calculator">
+        Luku1 <input type="text" name="numero1">
+        <br>
+        Luku2 <input type="text" name="numero2">
+        <br>
+        Lukujen summa: <input type="text" name="tulos">
+        <br>
+        <input type="button" value="Summa" onclick="summa()">
+        <input type="button" value="Erotus" onclick="erotus()">
+        <input type="button" value="Tulus" onclick="tulo()">
+        <input type="button" value="Jako" onclick="jako()">
+        <input type="button" value="Tyhennä" onclick="tyhjennä()">
+        <br>
+    </form>
+    <script>
+        var n1 = Number(document.calculator.numero1.value);
+        var n2 = Number(document.calculator.numero2.value);
+        function summa() {
+            let t = n1 + n2;
+            document.calculator.tulos.value = t;
+        }
+        function erotus() {
+            let t = n1 - n2;
+            document.calculator.tulos.value = t;
+        }
+        function tulo() {
+            let t = n1 * n2;
+            document.calculator.tulos.value = t;
+        }
+        function jako() {
+            let t = n1 / n2;
+            document.calculator.tulos.value = t;
+        }
+        function tyhjennä() {
+            document.calculator.tulos.value = "";
+            document.calculator.Number1.value = "";
+            document.calculator.Number2.value = "";
+        }
+    </script>
+</body>
+
+</html>
